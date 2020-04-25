@@ -1,10 +1,10 @@
 # Site settings
-title: BY Blog
-SEOTitle: 大洋的博客 | BY Blog
+title: LNG Blog
+SEOTitle: 大洋的博客 | LNG Blog
 header-img: img/post-bg-desk.jpg
 email: 985947358@qq.com
 description: "I somly swear that I am up to no good!"
-keyword: "BY, BY Blog, 大洋的博客"
+keyword: "LNG, LNG Blog, 大洋的博客"
 url: "http://landry12138.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/landry12138/qiubaiying.github.io.git" # you code repository
@@ -12,7 +12,7 @@ github_repo: "https://github.com/landry12138/qiubaiying.github.io.git" # you cod
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Goals determine what you going to be!"
-sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/about-LNG-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -66,7 +66,7 @@ gitalk:
   clientSecret: 17fbc1baf002cd64b1477e2e52dc96a63fcdd85f    #生成的clientSecret
   repo: landry12138.github.io    #仓库名称
   owner: landry12138    #github用户名
-  admin: qiubaiying
+  admin: landry12138
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
