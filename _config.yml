@@ -7,7 +7,7 @@ description: "I somly swear that I am up to no good!"
 keyword: "LNG, LNG Blog, 大洋的博客"
 url: "http://landry12138.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/landry12138/qiubaiying.github.io.git" # you code repository
+github_repo: "https://github.com/landry12138.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
