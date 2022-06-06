@@ -2,8 +2,8 @@
 title: LNG Blog
 SEOTitle: 大洋的博客 | LNG Blog
 header-img: img/post-bg-desk.jpg
-email: 985947358@qq.com
-description: "I somly swear that I am up to no good!"
+email: landry12138@126.com
+description: "学无止境"
 keyword: "LNG, LNG Blog, 大洋的博客"
 url: "http://landry12138.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
@@ -12,7 +12,7 @@ github_repo: "https://github.com/landry12138.github.io.git" # you code repositor
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Goals determine what you going to be!"
-sidebar-avatar: /img/about-LNG-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/ldy.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 # SNS settings
