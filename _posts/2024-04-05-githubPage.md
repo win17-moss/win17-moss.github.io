@@ -7,7 +7,7 @@ author:     WL
 header-img: img/post-bg-markdown.jpg
 catalog: true
 tags:
-    - Web
+    - Blog
 ---
 
 ## Github page建立
