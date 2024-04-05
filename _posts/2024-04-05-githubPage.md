@@ -4,7 +4,7 @@ title:      GithubPage设置
 subtitle:   具体没想好
 date:       2024-04-05
 author:     WL
-header-img: img/post-bg-cook.jpg
+header-img: img/post-bg-markdown.jpg
 catalog: true
 tags:
     - iOS
