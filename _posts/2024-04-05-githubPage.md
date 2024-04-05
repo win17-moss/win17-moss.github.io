@@ -7,7 +7,7 @@ author:     WL
 header-img: img/post-bg-markdown.jpg
 catalog: true
 tags:
-    - iOS
+    - Web
 ---
 
 ## Github page建立
