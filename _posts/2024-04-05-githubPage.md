@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      GithubPage设置
-subtitle:   具体没想好
+subtitle:   多看看想想总是符合本质的
 date:       2024-04-05
 author:     WL
 header-img: img/post-bg-markdown.jpg
