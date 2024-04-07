@@ -1,13 +1,13 @@
 ---
 layout:     post
-title:      ARC 与 MRC 混合使用
-subtitle:   MRC 库的处理
-date:       2020-11-03
-author:     BY
+title:      SelfplayDrum 装置
+subtitle:   MCU + Ableton 基本工作原理
+date:       2024-04-07
+author:     WL
 header-img: img/post-bg-drum.jpg
 catalog: true
 tags:
-    - iOS
+    - DRUM
 ---
 
 
