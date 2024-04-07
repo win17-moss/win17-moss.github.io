@@ -12,24 +12,17 @@ tags:
 
 
 
-## Xcode 项目中我们可以使用 ARC 和非 ARC 的混合模式。
+## Selfplay Drum 项目
 
-> 有些时候我们工程中引用了十分古老的库为MRC模式，这时就需要采用混合模式进行处理
+> Arduino mega2560 + Ableton+57步进电机+推拉电磁铁+语音识别板+pwm控制模块+Mos开关电路+搞笑老男人
 
-- 如果你的项目使用的 MRC 模式，要为 ARC 模式的代码文件加入 `-fobjc-arc` 标签。
+- 开发环境Arduino IDE,通过Ableton写歌，然后通过LoopMini软件接口，发送Hairless软件模拟接口，通过串口与开发板通讯
 
 
-- 如果你的项目使用的是 ARC 模式，要为 MRC 代码文件加入 `-fno-objc-arc` 标签
+- 如果控制MCU可以通过usb接入电脑，可以使用MidiLibray工作，省去LoopMini和Hairless入 
 
-添加标签的方法：
+前期的现场图片：
 
-打开：你的`target -> Build Phases -> Compile Sources`
+![](https://nibilu.oss-cn-beijing.aliyuncs.com/img/IMG_3485.jpg)
 
-双击对应的 *.m 文件
-
-在弹出窗口中输入上面提到的标签 `-fobjc-arc` 或 `-fno-objc-arc`
-点击 done 保存
-
-![](https://ws3.sinaimg.cn/large/006tKfTcgy1fl3kvg0yp1j30pl0ahgov.jpg)
- 
-
+![](https://nibilu.oss-cn-beijing.aliyuncs.com/img/IMG_3491.jpg)
