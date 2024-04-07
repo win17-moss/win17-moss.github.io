@@ -49,7 +49,9 @@ tags:
 以下示例可以直接手机全屏并且高清，视频分享链接替换下图中部分
 
 `<iframe src="//player.bilibili.com/player.html?aid=1152671127&bvid=BV19Z421v735&cid=1493743377&p=1" scrolling="no" width="800px" height="600px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>`
+
 [详细讲解看](https://www.bilibili.com/read/cv6775208/)
+
 <div style="position: relative; padding: 30% 45%;">
 <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=1152671127&bvid=BV19Z421v735&cid=1493743377&page=1&as_wide=1&high_quality=1&danmaku=0" frameborder="no" scrolling="no"> </iframe>
 </div> 
