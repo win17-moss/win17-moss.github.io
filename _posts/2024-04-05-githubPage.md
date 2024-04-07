@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      GithubPage设置
-subtitle:   多看看想想总是符合本质的
+title:      基于Github服用的Blog搭建
+subtitle:   新手如何通过Github建立网站
 date:       2024-04-05
 author:     WL
 header-img: img/post-bg-markdown.jpg
