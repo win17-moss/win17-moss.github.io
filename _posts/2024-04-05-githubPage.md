@@ -18,6 +18,11 @@ tags:
 
 [Github图床太慢用阿里云OSS资源包建立](https://zhuanlan.zhihu.com/p/104152479)
 
+通过oss browser管理oss资源包，安装后配置如下，Endpoint默认就行不填（以下为错误示范）
+
+![Ossbrowser配置](https://nibilu.oss-cn-beijing.aliyuncs.com/img/aliyunOssbrowserSet.png)
+
+
 ## PicGo 传图工具 配合 Typora工具（Markdown编辑神器）
 
 - typora安装，将下载的app.asar.txt 文件中的后缀.txt去掉，并拷贝到typora安装路径下替换，C:\Typora\resources 根据自己的安装路径进行替换
