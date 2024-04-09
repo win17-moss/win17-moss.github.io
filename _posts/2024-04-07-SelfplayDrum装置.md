@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      SelfplayDrum 装置
+title:      自动打鼓系统
 subtitle:   MCU + Ableton 基本工作原理
 date:       2024-04-07
 author:     WL
