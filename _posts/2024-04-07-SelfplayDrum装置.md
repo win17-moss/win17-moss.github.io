@@ -7,7 +7,7 @@ author:     WL
 header-img: img/post-bg-drum.jpg
 catalog: true
 tags:
-    - DRUM
+    - Drum
 ---
 
 
