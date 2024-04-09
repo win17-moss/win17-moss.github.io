@@ -8,6 +8,7 @@ header-img: img/post-bg-markdown.jpg
 catalog: true
 tags:
     - Blog
+
 ---
 
 ## Github page建立
@@ -21,6 +22,29 @@ tags:
 通过oss browser管理oss资源包，安装后配置如下，Endpoint默认就行不填（以下为错误示范）
 
 ![Ossbrowser配置](https://nibilu.oss-cn-beijing.aliyuncs.com/img/aliyunOssbrowserSet.png)
+
+## Gitalk评论日系统插入
+
+- 注册OAuth Application
+
+- 到 https://github.com/settings/applications/new 注册一个OAuth Application, 其中 Home page URL 填自己的博客地址, 如我的https://zzqcn.github.io/, Authorization callback URL 也填自己的博客地址.填好后提交, 得到client ID和client secret,记录好填入Blog的Gitalk 参数中。
+
+- 在github仓库中开启issues
+
+  ![](https://nibilu.oss-cn-beijing.aliyuncs.com/img/github%E5%BC%80%E5%90%AFissues.jpg)
+
+- 我们需要关心的就是配置下面几个参数：
+
+```js
+clientID: `Github Application clientID`,
+clientSecret: `Github Application clientSecret`,
+repo: `Github 仓库名`,//存储你评论 issue 的 Github 仓库名（建议直接用 GitHub Page 的仓库名）
+owner: 'Github 用户名',
+admin: ['Github 用户名'], //这个仓库的管理员，可以有多个，用数组表示，一般写自己,
+id: 'window.location.pathname', //页面的唯一标识，gitalk 会根据这个标识自动创建的issue的标签,我们使用页面的相对路径作为标识
+```
+
+- Gitalk 需要你点开每篇文章的页面才会创建对应的 issue
 
 
 ## PicGo 传图工具 配合 Typora工具（Markdown编辑神器）
@@ -60,3 +84,4 @@ tags:
 <div style="position: relative; padding: 30% 45%;">
 <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=1152671127&bvid=BV19Z421v735&cid=1493743377&page=1&as_wide=1&high_quality=1&danmaku=0" frameborder="no" scrolling="no"> </iframe>
 </div> 
+
