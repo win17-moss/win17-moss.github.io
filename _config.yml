@@ -99,16 +99,16 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "WY",
-        href: "http://zhengwuyang.com"
+        title: "Bilibili",
+        href: "https://space.bilibili.com/1666981688?spm_id_from=333.1007.0.0"
     },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
+        title: "",
+        href: ""
     },{
-        title: "Apple",
-        href: "https://apple.com"
+        title: "",
+        href: ""
     },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
+        title: "",
+        href: ""
     }
 ]
