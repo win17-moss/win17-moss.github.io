@@ -110,5 +110,11 @@ friends: [
     },{
         title: "Github",
         href: "https://github.com/"
+    },{
+        title: "OSCollect",
+        href: "http://oscollect.old-dos.ru/"
+    },{
+        title: "Beta百科",
+        href: "https://wiki.betaworld.cn/%E9%A6%96%E9%A1%B5"
     }
 ]
