@@ -57,11 +57,11 @@ kramdown:
 
 # 评论系统
 # Disqus（https://disqus.com/）
-#disqus_username: jiachenghao
+  [disqus_username: jiachenghao
 
 # Gitalk
 gitalk:
-  enable: true    #是否开启Gitalk评论
+  enable: true   #是否开启Gitalk评论
   clientID: Ov23lijkEnujWLf45QJL                          #生成的clientID
   clientSecret: 4d37fcf489fb917b07aec624ce96ea836a691394    #生成的clientSecret
   repo: Jiachenghao6.github.io    #仓库名称
