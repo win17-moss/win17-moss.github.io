@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="GMkFtb0KNx56Lp6I28kCBDl9boToErOOJdIlrBhY">
+    <title >勇户登录</title>
+    <!-- Styles -->
+    <link href="http://cloud.linspirer.com:880/css/app.css" rel="stylesheet">
+    <link href="http://cloud.linspirer.com:880/css/bootstrap-dialog.min.css" rel="stylesheet">
+    <link href="http://cloud.linspirer.com:880/css/main.css" rel="stylesheet">
+    <link href="http://cloud.linspirer.com:880/css/271.css" rel="Stylesheet">
+</head>
+<body>
+<article class="container-fluid">
+    <header class="page-header">
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="navbar-header">
+                <!-- Branding Image -->
+                <a  href="https://gitee.com/windows-17/linspirer">
+                    <img src="logb.png" alert="logo" class="header_logo">
+                </a>
+            </div>
+            <!-- Right Side Of Navbar -->
+                    </nav>
+    </header>
+    <div>
+                <div class="article-content">
+            <div class="container" style="margin:0;">
+                <h3 style="margin:26px 0;">欢迎使用****</h3>
+                <div class="row">
+                    <div class="col-md-4">请使用*******平台</div>
+                </div>
+
+                <div class="row" style="margin-top:20px;">
+                    <div class="col-md-6 col-md-offset-2 user-login" style="margin-left:0;">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-md-6 text-left" style="padding: 0;">**denglu</div>
+                                    <div class="col-md-6 text-right" style="padding: 0;">
+                                        <span class="dropdown">
+                                                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                              宗闻(简体)
+                                              <span class="caret"></span>
+                                            </a>
+                                            <ul class="dropdown-menu" style="font-size: 12px;">
+                                                                                                                                              <li>
+                                                  <a href="http://cloud.linspirer.com:880/changelang/en-US">
+                                                    鹰哥啦史
+                                                  </a>
+                                                </li>
+                                                                                                                                                                                                                                        </ul>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <form id="login-form" class="form" method="POST" action="http://cloud.linspirer.com:880/login">
+    <input type="hidden" name="_token" value="GMkFtb0KNx56Lp6I28kCBDl9boToErOOJdIlrBhY">
+    <div id="password-login">
+        <div class="form-group">
+            <label for="email" >登录鳘</label>
+            <input id="email" type="email" class="form-control" name="email" value="" maxlength="120" required autofocus>
+            <span class="help-block">
+                <strong>
+                                </strong>
+            </span>
+        </div>
+        <div class="form-group">
+            <label for="password" >米 码</label>
+            <input id="password" type="password" class="form-control" name="password"
+                   maxlength="60" required onkeydown="triggerFormSubmit(event);">
+            <span class="help-block">
+                <strong>
+                                </strong>
+            </span>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-6 remember-container">
+                    <input type="checkbox" id="remember" name="remember"  /> 记不住我
+                </div>
+                <div class="col-md-6 sms-login sms_verification_container">
+                    <a href="javascript:void(0);">******码登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sms-login" hidden>
+        <div class="form-group">
+            <label for="phone" >手机号码</label>
+            <div class="input-group">
+                <span class="input-group-addon">+86</span>
+                <input type="text" class="form-control phone" id="phone" name="phone" value="" placeholder="手机号" onblur="vailPhone(this)">
+            </div>
+            <span class="help-block">
+                <strong>
+                                </strong>
+            </span>
+        </div>
+        <div class="form-group">
+            <label for="sms_verify_code" >短信验证码</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="sms_verify_code" name="sms_verify_code"
+                       placeholder="短信验证码" onkeydown="triggerFormSubmit(event);">
+                <span class="input-group-addon get-active-code" onclick="getVerifyCode(this, 'http://cloud.linspirer.com:880/api/service');">获取验证码</span>
+            </div>
+            <span class="help-block">
+                <strong>
+                                </strong>
+            </span>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-6 remember-container"></div>
+                <div class="col-md-6 password-login sms_verification_container">
+                    <a href="javascript:void(0);">米码登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group btn_login_container">
+        <button type="button" onclick="submit_login();" class="btn btn-primary btn_submit_login">
+            灯 录
+        </button>
+    </div>
+</form>
+<div id="phone-verify-container" hidden>
+    <div id="sms-login-verify" >
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row well-sm">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span id="verify_phone_number_tip">为确保您的账号安全，本次登录需要验证您的手机号，验证码将以短信的形式发送至以下手机号码</span>
+                </div>
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-10">
+                        <div class="verify-phone-container"></div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="need_verify_code" id="need_verify_code" placeholder="短信验证码">
+                                <span class="input-group-addon get-active-code allow-active-code" onclick="getVerifyCodeForFirstBind(this, 'http://cloud.linspirer.com:880/api/service');">获取验证码</span>
+                            </div>
+                            <span class="help-block"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="show-admin-container" hidden>
+    <div id="select-admin-login" style="font-size: 12px;"></div>
+</div>
+<script src="http://cloud.linspirer.com:880/js/libs/jquery-3.2.1.min.js"></script>
+<script src="http://cloud.linspirer.com:880/js/libs/app.js"></script>
+<script src="http://cloud.linspirer.com:880/js/libs/bootstrap-dialog.min.js"></script>
+<script src="zh-CN.js"></script>
+<script src="http://cloud.linspirer.com:880/js/libs/jquery.cookie.js"></script>
+<script src="http://cloud.linspirer.com:880/js/helper.js"></script>
+<script>
+    $(document).ready(function(){
+        var rem = $.cookie('remember');
+        if(rem){
+            $("#remember").prop("checked",true);
+            $("#email").val($.cookie("username"));
+        }
+                    });
+    //保存用户名到cookie
+    function save_cookies(){
+        if($("#remember").prop("checked")){
+            var email = $("#email").val();
+            $.cookie("remember","true",{expires:7});
+            $.cookie("username",email,{expires:7 });
+        }else{
+            $.cookie("remember","false",{expires:-1});
+            $.cookie("username","",{ expires:-1 });
+        }
+    }
+    let smsLogin = false;
+    $(".sms-login").click(function () {
+        smsLogin = true;
+        enableSmsLogin();
+        disabledPwdLogin();
+        showSmsLogin();
+    });
+    $(".password-login").click(function () {
+        smsLogin = false;
+        enablePwdLogin();
+        disabledSmsLogin();
+        showPwdLogin();
+    });
+
+    /** 获取手机验证码,新建和编辑管理员，个人中心替换手机号码时使用 */
+    function getVerifyCodeForFirstBind(cur_this, serviceApi)
+    {
+        let email = $("#email").val();
+        let password = $("#password").val();
+        let data = {"email": email, "password": password};
+        processVerifyCode(cur_this, serviceApi, "sendMsgCodeForFirstBind", data);
+    }
+
+    /** 校验帐号密码是否正确 */
+    function checkEmailPassword() {
+        let email = $.trim($("#email").val());
+        let password = $.trim($("#password").val());
+        ajax_post_json_request_no_unified("http://cloud.linspirer.com:880/api/service", "verifyEmailPassword",{"email" : email, "password": password},function(response_obj){
+            let emailContainer = $("#email").parent();
+            emailContainer.removeClass('has-error');
+            emailContainer.find(".help-block").empty();
+            let passwordContainer = $("#password").parent();
+            passwordContainer.removeClass('has-error');
+            passwordContainer.find(".help-block").empty();
+            if(response_obj.code == 0){ //帐号密码验证通过，下面开始校验手机号和验证码
+                showVerifyDialog(response_obj.data);
+            }else if(response_obj.code == -21800) { //only use account and password login
+                enablePwdLogin();
+                disabledSmsLogin();
+                $("#login-form").submit();
+            } else if (response_obj.code == -22400) { //帐号没有绑定手机号码，弹框绑定设备
+                showVerifyDialog();
+            }/*else if (response_obj.code == -21600) { // 用户名密码错误
+                emailContainer.addClass('has-error');
+                emailContainer.find(".help-block").text(response_obj.data);
+                button_spin.stopSpin();
+                dialogRef.enableButtons(true);
+            }*/else {
+                let resData = response_obj.data;
+                if (resData.email) {
+                    emailContainer.addClass('has-error');
+                    emailContainer.find(".help-block").text(resData.email['0']);
+                }
+                if (resData.password) {
+                    passwordContainer.addClass('has-error');
+                    passwordContainer.find(".help-block").text(resData.password['0']);
+                }
+            }
+        });
+    }
+
+    function firstBindPhone(pVContainer, dialogRef, button_spin) { //帐号第一次绑定手机号码
+        let phone = $.trim(pVContainer.find("#need_bind_phone").val());
+        let verify_code = $.trim(pVContainer.find("input[name=need_verify_code]").val()) ;
+        let email = $("#email").val();
+        let password = $("#password").val();
+        let data = {"email" : email, "password": password, "phone": phone, "sms_verify_code": verify_code};
+        ajax_post_json_request_no_unified("http://cloud.linspirer.com:880/api/service", "firstBindPhoneForLogin",data,function(response_obj){
+            if(response_obj.code == 0){ //手机号绑定帐号成功
+                $("#phone").val(phone);
+                $("#sms_verify_code").val(verify_code);
+                $("#password").attr("disabled", "disabled");
+                enableSmsLogin();
+                /*disabledPwdLogin();*/
+                $("#login-form").submit();
+                dialogRef.close();
+            }else if (response_obj.code == -21201) { //自定义请求参数无效
+                let resData = response_obj.data;
+                let emailContainer = $("#email").parent();
+                emailContainer.removeClass('has-error');
+                emailContainer.find(".help-block").empty();
+                if (resData.email) {
+                    emailContainer.addClass('has-error');
+                    emailContainer.find(".help-block").text(resData.email['0']);
+                    dialogRef.close();
+                }
+                let passwordContainer = $("#password").parent();
+                passwordContainer.removeClass('has-error');
+                passwordContainer.find(".help-block").empty();
+                if (resData.password) {
+                    passwordContainer.addClass('has-error');
+                    passwordContainer.find(".help-block").text(resData.password['0']);
+                    dialogRef.close();
+                }
+                let needBindPhoneContainer = pVContainer.find("#need_bind_phone").parent().parent();
+                needBindPhoneContainer.removeClass("has-error");
+                needBindPhoneContainer.find(".help-block").empty();
+                if (resData.phone) {
+                    needBindPhoneContainer.addClass('has-error');
+                    needBindPhoneContainer.find(".help-block").text(resData.phone['0']);
+                }
+                let needVerifyCodeContainer = pVContainer.find("#need_verify_code").parent().parent();
+                needVerifyCodeContainer.removeClass("has-error");
+                needVerifyCodeContainer.find(".help-block").empty();
+                if (resData.sms_verify_code) {
+                    needVerifyCodeContainer.addClass("has-error");
+                    needVerifyCodeContainer.find(".help-block").text(resData.sms_verify_code['0']);
+                }
+                button_spin.stopSpin();
+                dialogRef.enableButtons(true);
+            } else if(response_obj.code == -21800) { //帐号已经绑定其他手机或者手机已经绑定其他帐号
+                pVContainer.find("#need_bind_phone").parent().parent().addClass('has-error');
+                pVContainer.find("#need_bind_phone").parent().next(".help-block").text(response_obj.data);
+                button_spin.stopSpin();
+                dialogRef.enableButtons(true);
+            }else if (response_obj.code == -21600) { // 短信验证码错误
+                pVContainer.find("#need_verify_code").parent().parent().removeClass("has-error").addClass("has-error");
+                pVContainer.find("#need_verify_code").parent().next().text(response_obj.data);
+                button_spin.stopSpin();
+                dialogRef.enableButtons(true);
+            } else {
+                showError(response_obj.data, function () {
+                    window.location.reload();
+                })
+            }
+        });
+    }
+
+    /** 第一次帐号登录,或者是登录超过7天,或者切换城市登录 帐号密码验证通过后开始验证手机号码和短信验证码 */
+    function firstAccountLoginVerifyCode(pVContainer, dialogRef, button_spin) { //帐号第一次绑定手机号码
+        let phone = $.trim($("#phone").val());
+        let verify_code = $.trim($("#sms_verify_code").val()) ;
+        ajax_post_json_request_no_unified("http://cloud.linspirer.com:880/api/service", "verifyPhoneVerifyCode",
+            {"phone" : phone, "sms_verify_code": verify_code}, function(response_obj){
+            if(response_obj.code == 0){ //手机号码和验证码验证通过
+                $("#login-form").submit();
+                dialogRef.close();
+            }else if (response_obj.code == -21201) { //自定义请求参数无效
+                let resData = response_obj.data;
+                let needVerifyCodeContainer = pVContainer.find("#need_verify_code").parent().parent();
+                if (resData.sms_verify_code) {
+                    needVerifyCodeContainer.removeClass("has-error").addClass("has-error");
+                    needVerifyCodeContainer.find(".help-block").empty().text(resData.sms_verify_code['0']);
+                }
+                button_spin.stopSpin();
+                dialogRef.enableButtons(true);
+            }
+        });
+    }
+
+    function showVerifyDialog(phoneNum) {
+        let firstBind = false;
+        let pVContainer = $("#phone-verify-container>div").clone();
+        pVContainer.find(".help-block").parent().removeClass("has-error");
+        if (phoneNum) {
+            pVContainer.find(".verify-phone-container").empty().append(alreadyBindDivHtml);
+            pVContainer.find("#need_phone").val(phoneNum);
+            pVContainer.find("#phoneNumber_txt").empty().text(phoneNum);
+            pVContainer.find("#verify_phone_number_tip").empty().text("为确保您的账号安全，本次登录需要验证您的手机号，验证码将以短信的形式发送至以下手机号码");
+        } else {//第一次绑定
+            firstBind = true;
+            pVContainer.find(".verify-phone-container").empty().append(firstBindDivHtml);
+            pVContainer.find("#verify_phone_number_tip").empty().text("之前发现因系统账号密码泄露导致很多学校及学生的设备脱离管控的问题，为确保管理员账号的信息安全，因此本次登录的时候需要将您的账号与手机号进行绑定，下次您可以使用手机号码登录。");
+        }
+        showForm("手机号码验证",pVContainer, function(dialogRef, button_spin){
+            let dialog_form = dialogRef.$modalBody;
+            let need_verify_code = $.trim(dialog_form.find("input[name=need_verify_code]").val()) ;
+            if (firstBind) {
+                phoneNum = $.trim(dialog_form.find('#need_bind_phone').val());
+                vailPhone(dialog_form.find('#need_bind_phone'));
+                firstBindPhone(dialog_form, dialogRef, button_spin);
+                return true;
+            }
+            if (need_verify_code && phoneNum) {
+                $("#phone").val(phoneNum);
+                $("#sms_verify_code").val(need_verify_code);
+                $("#password").attr("disabled", "disabled");
+                enableSmsLogin();
+                firstAccountLoginVerifyCode(dialog_form, dialogRef, button_spin);
+                return true;
+            }
+            dialog_form.find(".help-block").parent().addClass("has-error");
+            dialog_form.find(".help-block").text("验证码不能为空.");
+        });
+    }
+
+    /** 手机号码验证码登录验证 */
+    function checkPhoneVCodeForSmsLogin() {
+        let phone = $.trim($("#phone").val());
+        let sms_verify_code = $.trim($("#sms_verify_code").val());
+        ajax_post_json_request_no_unified("http://cloud.linspirer.com:880/api/service", "verifyPhoneVerifyCode",
+            {"phone" : phone, "sms_verify_code": sms_verify_code}, function(response_obj){
+            let phoneContainer = $("#phone").parent().parent();
+            phoneContainer.removeClass('has-error');
+            phoneContainer.find(".help-block").empty();
+            let verifyCodeContainer = $("#sms_verify_code").parent().parent();
+            verifyCodeContainer.removeClass('has-error');
+            verifyCodeContainer.find(".help-block").empty();
+            if(response_obj.code == 0){ //帐号密码验证通过，下面开始校验手机号和和验证码
+                if (response_obj.data < 2) { // phone only bind one email
+                    $("#login-form").submit();
+                    return true;
+                }
+                showSelectAdminLogin(phone, sms_verify_code);
+            } else if (response_obj.code == -21201) { //自定义请求参数无效
+                let resData = response_obj.data;
+                let phoneContainer = $("#phone").parent().parent();
+                phoneContainer.removeClass('has-error');
+                phoneContainer.find(".help-block").empty();
+                if (resData.phone) {
+                    phoneContainer.addClass('has-error');
+                    phoneContainer.find(".help-block").text(resData.phone['0']);
+                }
+                let verifyCodeContainer = $("#sms_verify_code").parent().parent();
+                verifyCodeContainer.removeClass('has-error');
+                verifyCodeContainer.find(".help-block").empty();
+                if (resData.sms_verify_code) {
+                    verifyCodeContainer.addClass('has-error');
+                    verifyCodeContainer.find(".help-block").text(resData.sms_verify_code['0']);
+                }
+            }
+        });
+    }
+
+    /** 请选择要登录的管理员帐号 */
+    function showSelectAdminLogin(phoneNum, smsVerifyCode) {
+        let pVContainer = $("#show-admin-container>div").clone();
+        pVContainer.find(".help-block").parent().removeClass("has-error");
+        let request_url = "http://cloud.linspirer.com:880/admin/showphonebindadminlist/" + phoneNum + "/" + smsVerifyCode;
+        get_html_from_server(request_url,function (response_data) {
+            pVContainer.empty().html(response_data).find('.pagination a.btn').prop("onclick",null).off("click");
+            laravel_pagination_ajax("select-admin-login", "bootstrap-dialog-message");
+            showDetail("帐号选择", pVContainer);
+        });
+    }
+
+    /** 禁止表单中的帐号密码提交 */
+    function disabledPwdLogin() {
+        $("#password").attr("disabled", "disabled");
+        $("#email").attr("disabled", "disabled");
+    }
+    /** 禁止表单中的手机号验证码提交 */
+    function disabledSmsLogin() {
+        $("#phone").attr("disabled", "disabled");
+        $("#sms_verify_code").attr("disabled", "disabled");
+    }
+    function enablePwdLogin() {
+        $("#password").removeAttr("disabled");
+        $("#email").removeAttr("disabled");
+    }
+    function enableSmsLogin() {
+        $("#phone").removeAttr("disabled");
+        $("#sms_verify_code").removeAttr("disabled");
+    }
+    function phoneBindMultiSmsLogin() {
+        $("#phone").removeAttr("disabled");
+        $("#sms_verify_code").removeAttr("disabled");
+        $("#email").removeAttr("disabled");
+        $("#password").attr("disabled", "disabled");
+    }
+    function showSmsLogin() {
+        $("#password-login").hide();
+        $("#sms-login").show();
+    }
+    function showPwdLogin() {
+        $("#password-login").show();
+        $("#sms-login").hide();
+    }
+
+    let firstBindDivHtml = '<div class="form-group first_bind" >' + '<div class="input-group">'
+        + '<span class="input-group-addon">+86</span>'
+        + '<input type="text" class="form-control phone" id="need_bind_phone" placeholder="手机号" onblur="vailPhone(this);">'
+        + '</div><span class="help-block"></span></div>';
+
+    let alreadyBindDivHtml = '<div class="form-group text-center already_bind"><strong><span id="phoneNumber_txt"></span></strong>'
+        + '<input type="text" hidden id="need_phone" class="phone"></div>';
+
+    function submit_login() {
+        if (smsLogin) { //直接使用短信登录
+            checkPhoneVCodeForSmsLogin();
+            return true;
+        }
+        save_cookies();
+        checkEmailPassword();
+        return false;
+    }
+
+    //添加回车提交表单事件
+    function triggerFormSubmit(event){
+        if (event.keyCode === 13) {
+            submit_login();
+        }
+    }
+</script>                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid foot-wrap">
+        <nav class="navbar navbar-defaul container-fluid foot-wrap">
+            <ul class="nav navbar-nav">
+                                    <li><a href="#"> Version: V4.4.4</a></li>
+                            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li>
+                    <a href="#">
+                                                                                    Copyright &copy; 2015 - 2024, 南京*****有限公司(Linspirer), All Rights Reserved
+                                                                        </a>
+                </li>
+                <li><a target="_blank" href="http://beian.miit.gov.cn">苏ICP备114514号-1</a ></li>
+            </ul>
+        </nav>
+    </footer>
+</article>
+</body>
+</html>
