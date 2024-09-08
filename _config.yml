@@ -73,11 +73,11 @@
     <div class="weui-msg__extra-area">
         <div class="weui-footer">
 <div class="weui-media-box weui-media-box_text line-indent">
-        <h4 class="weui-media-box__title text-primary">领创登录本地版:</h4>
-        <p>使用这个可以研究登录原理。</p>
+        <h4 class="weui-media-box__title text-primary">进入网站:</h4>
+        <p>单击进入网站。</p>
     </div>
     <p class="weui-footer__links">
-        <a href="login.html" class="weui-footer__link">勇户登录-本地</a>
+        <a href="web.html" class="weui-footer__link">勇户登录-本地</a>
 </div>
 	<p class="weui-footer__links">
         <a href="https://gitee.com/windows-17/linspirer" class="weui-footer__link">下载站</a>
