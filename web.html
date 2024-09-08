@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+    <title>泡中机盟</title>
+    <link href="http://wechat.linspirer.com/css/weui/weui.css" rel="stylesheet">
+    <link href="http://wechat.linspirer.com/css/app.css" rel="stylesheet">
+    <link href="http://wechat.linspirer.com/css/main.css" rel="stylesheet">
+        <style>
+        .student{
+            display: none;
+        }
+        .active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <div class="container">
+            <div class="page__bd" style="height: 100%;">
+        <div class="weui-tab">
+            <div class="weui-navbar">
+                <div rel="#company_introduce" class="weui-navbar__item weui-bar__item_on">
+                    组织简介
+                </div>
+                <div rel="#plat_introduce" class="weui-navbar__item">
+                    领创简介
+                </div>
+                <div rel="#core_features" class="weui-navbar__item">
+                    信息
+                </div>
+            </div>
+
+            <div class="weui-tab__panel">
+                <div id="company_introduce" class="student active">
+    <div class="weui-media-box weui-media-box_text line-indent">
+        <p>长期和linspirer进行斗争不是为了取乐，只是为了不被********。</p>
+	<p>搞机要谨慎，可能会变砖，可能会带管，后果自负。</p>
+    </div>
+</div>
+<div id="plat_introduce" class="student">
+    <div class="weui-media-box weui-media-box_text line-indent">
+        <p>领创移动管理云平台是为智慧教育领域移动终端管理，量身打造的整体解决方案，通过与硬件厂商的深度集成，提供移动设备管理（MDM）、
+            移动应用管理（MAM）、移动安全管理（MSM）等功能，满足学校和家长对学生使用移动终端的统一配置、行为管控、作弊预防、网络白名单、
+            应用授权、硬件功能开关等需求。打消学校和家长对学生滥用移动终端的顾虑，为智慧课堂提供全方位解决方案，帮助学校打造高效和安全的移动化教育平台。</p>
+             <p>南京领创信息科技有限公司是国内领先的智慧课堂移动管理云服务及增值服务运营商，专注于教育行业专属的移动互联网技术的创新与变革。</p>
+        <p>经过多年的教育行业的磨砺，领创科技取得了丰硕的结果，积累的广泛的资源。当前，领创智慧课堂移动管理云平台为全国近2000所中小学提供服务，
+            其中包括360多所名校，学校数量持续增加中。服务范围覆盖全国32个省级行政区。科大讯飞、华为、联想、三星、海信、酷比魔方等均是领创科技的核心客户。</p>
+    </div>
+</div>
+<div id="core_features" class="student">
+    <div class="weui-media-box weui-media-box_text line-indent">
+        <h4 class="weui-media-box__title text-primary">三方内容应用自由接入:</h4>
+        <p>可通过api广播执行一些轻浮暴力的事。</p>
+    </div>
+    <div class="weui-media-box weui-media-box_text line-indent">
+        <h4 class="weui-media-box__title text-primary">深度融合的**桌面:</h4>
+        <p>通过特殊的，轻浮暴力的方式可以完成一些操作，9008-fastboot都可尝试。</p>
+    </div>
+    <div class="weui-media-box weui-media-box_text line-indent">
+        <h4 class="weui-media-box__title text-primary">局域网络白名单控制:</h4>
+        <p>使用自主知识产权的网络控制模块，可以实现局域网内自我控制，安装，解控，重置都可。</p>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="weui-msg__extra-area">
+        <div class="weui-footer">
+<div class="weui-media-box weui-media-box_text line-indent">
+        <h4 class="weui-media-box__title text-primary">领创登录本地版:</h4>
+        <p>使用这个可以研究登录原理。</p>
+    </div>
+    <p class="weui-footer__links">
+        <a href="login.html" class="weui-footer__link">勇户登录-本地</a>
+</div>
+	<p class="weui-footer__links">
+        <a href="https://gitee.com/windows-17/linspirer" class="weui-footer__link">下载站</a>
+    </p>
+    <p class="weui-footer__text">Copyright www.gitee.com</p>
+</div>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://wechat.linspirer.com/js/libs/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="http://wechat.linspirer.com/js/helpers.js"></script>
+<script type="text/javascript" src="http://wechat.linspirer.com/js/libs/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="http://wechat.linspirer.com/js/libs/weui.min.js"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            $('.weui-navbar__item').on('click', function () {
+                $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+
+                $($(this).attr("rel")).addClass("active").siblings(".active").removeClass("active");
+            });
+        });
+    </script>
+</body>
+</html>
