@@ -74,47 +74,7 @@
 	</head>
 <body>
 	</head>
-<body>
-	<style>
-        /* 弹窗样式 */
-        .popup {
-            display: none;
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 480px;
-            height: 270px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            padding: 20px;
-            z-index: 9999;
-        }
-    </style>
-</head>
-<body>
-    <!-- 触发弹窗的按钮 -->
-    <button onclick="showPopup()">关于</button>
 
-    <!-- 弹窗内容 -->
-    <div id="popup" class="popup">
-        <h2>关于jm</h2>
-        <iframe src="jmtxt.txt" width='100%' height='160' frameborder='1' ></iframe>
-        <p></p>
-       <p></p>
-        <button onclick="hidePopup()">关闭</button>
-    </div>
-
-    <script>
-        // 显示弹窗
-        function showPopup() {
-            document.getElementById('popup').style.display = 'block';
-        }
-
-        // 隐藏弹窗
-        function hidePopup() {
-            document.getElementById('popup').style.display = 'none';
-        }
     </script>
   <div class="one">
     <dt><img src="logb.png"></dt>
