@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>泡中机盟</title>
+	</head>
+ <script>
+   function showWelcomeMessage() {
+       alert("欢迎访问我们的网站！");
+   }
+   </script>
+
+   <body onload="showWelcomeMessage()">
+   <!-- 页面内容 -->
 	<style>
 	   body {
             margin: 0px;
@@ -63,6 +72,26 @@
         }
     </script>
 	</head>
+<body>
+	</head>
+<body>
+	<style>
+        /* 弹窗样式 */
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 480px;
+            height: 270px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            z-index: 9999;
+        }
+    </style>
+</head>
 <body>
     <!-- 触发弹窗的按钮 -->
     <button onclick="showPopup()">关于</button>
