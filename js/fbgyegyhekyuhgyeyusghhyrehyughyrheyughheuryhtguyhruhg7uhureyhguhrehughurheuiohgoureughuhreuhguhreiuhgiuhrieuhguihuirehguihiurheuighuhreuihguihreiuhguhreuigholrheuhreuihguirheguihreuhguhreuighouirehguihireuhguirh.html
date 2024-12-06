@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>机盟内部网站</title>
-   </script> 
+    <title>泡中机盟</title>
+	</head>
+
+   <body onload="showWelcomeMessage()">
+   <!-- 页面内容 -->
+	<style>
+	   body {
+            margin: 0px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+		div{
+		  width:100%;
+		  height:100%;
+		}
+	  .one{
+		  background:url(launcher_bg.jpg)no-repeat center center / cover;
+		}
 	</style>
 </head>
 <body>
@@ -27,12 +44,12 @@
 </head>
 <body>
     <!-- 触发弹窗的按钮 -->
-    <button onclick="showPopup()">更新内容</button>
+    <button onclick="showPopup()">最新快讯</button>
 
     <!-- 弹窗内容 -->
     <div id="popup" class="popup">
-        <h2>更新内容</h2>
-        <iframe src="gxnr.txt" width='100%' height='160' frameborder='1' ></iframe>
+        <h2>最新快讯</h2>
+        <iframe src="jmkx.txt" width='100%' height='160' frameborder='1' ></iframe>
         <p></p>
        <p></p>
         <button onclick="hidePopup()">关闭</button>
