@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+    <title>泡中机盟</title>
+    
+    <div class="weui-msg__extra-area">
+        <div class="weui-footer">
+<div class="weui-media-box weui-media-box_text line-indent">
+        <h4 class="weui-media-box__title text-primary">领创登录本地版:</h4>
+        <p>使用这个可以研究登录原理。</p>
+    </div>
+    <p class="weui-footer__links">
+        <a href="login.html" class="weui-footer__link">勇户登录-本地</a>
+</div>
+	<p class="weui-footer__links">
+        <a href="https://gitee.com/windows-17/linspirer" class="weui-footer__link">下载站</a>
+    </p>
+    <p class="weui-footer__text">Copyright www.gitee.com</p>
+</div>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        $(function(){
+            $('.weui-navbar__item').on('click', function () {
+                $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+
+                $($(this).attr("rel")).addClass("active").siblings(".active").removeClass("active");
+            });
+        });
+    </script>
+</body>
+</html>
